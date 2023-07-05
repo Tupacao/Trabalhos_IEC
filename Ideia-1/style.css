@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.barras{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+form input{
+    height: 20px;
+    font-size: 15px;
+}
