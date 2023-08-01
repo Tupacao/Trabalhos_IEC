@@ -2,9 +2,14 @@ const express = require('express')
 const app = express()
 const bodyparser = require('body-parser')
 
-app.use(bodyparser.urlencoded({extended: false}))
+//app.use(bodyparser.urlencoded({extended: false}))
 
-app.get('/', (req,res) => {
+app.use ((req, res, next) => {
+    console.log (req.method, req.path, req.originalUrl)
+    next()
+})
+
+app.get('/', (req, res, next) => {
 
     res.send(
         `
@@ -17,7 +22,7 @@ app.get('/', (req,res) => {
     )
 })
 
-app.post('/resposta', (req, res) => {
+app.post('/resposta', bodyparser.urlencoded({extended: false}), (req, res) => {
     const {name, email} = req.body
     res.send(
         `
