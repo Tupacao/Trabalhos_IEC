@@ -11,4 +11,4 @@ teste.get('/second', (req,res) => {
     res.send("Segunda página")
 })
 
-module.export = teste
+module.exports = teste
