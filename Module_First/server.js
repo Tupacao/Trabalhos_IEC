@@ -4,7 +4,6 @@ const express = require('express')
 const app = express()
 const teste = require('./teste') 
 
-
 app.use('/modulo', teste)
 
 app.get('/', (req,res) => {

@@ -3,7 +3,7 @@
 const express = require('express')
 const teste = express.Router()
 
-teste.get('/one', (res,req) => {
+teste.get('/one', (req,res) => {
     res.send("Página primeira")
 })
 
